@@ -20,7 +20,9 @@ Page({
     // 商品大类第一行
     bigTypeList_row1: [],
     // 商品大类第二行
-    bigTypeList_row2: []
+    bigTypeList_row2: [],
+    // 热卖商品
+    hotProductList: []
   },
 
   /**
@@ -48,6 +50,8 @@ Page({
     this.getSwiperList(baseUrl);
     // 调用获取商品大类请求方法
     this.getBigType(baseUrl);
+    // 调用获取热卖商品方法
+    this.getHotProduct(baseUrl);
   },
 
   // async表示该请求是异步请求
@@ -97,8 +101,15 @@ Page({
       bigTypeList_row1,
       bigTypeList_row2
     })
-    console.log(bigTypeList);
-    console.log(bigTypeList_row1);
-    console.log(bigTypeList_row2);
+  },
+  // 获取热卖商品
+  async getHotProduct(baseUrl) {
+    const result = await requestPubUtil({
+      url: baseUrl + '/product/queryHotProduct',
+      method: "GET"
+    });
+    this.setData({
+      hotProductList:result.data.datas
+    })
   }
 })

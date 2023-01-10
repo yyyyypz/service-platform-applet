@@ -37,4 +37,23 @@
     </view>
   </view>
   <!-- 商品大类结束 -->
+
+  <!-- 热卖商品推荐开始 -->
+  <view class="index_hotProduct">
+    <view class="hotProduct_title">
+      热卖推荐
+    </view>
+    <view class="hotProduct_list">
+      <view class="product_detail" wx:for="{{hotProductList}}" wx:for-item="hotProductObject" wx:key="id">
+        <navigator>
+          <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+hotProductObject.proPic}}">
+          </image>
+          <view class="product_name">{{hotProductObject.name}}</view>
+          <view class="product_price">{{'¥'+hotProductObject.price}}</view>
+          <button size="mini" type="warn">立即购买</button>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 热卖商品推荐结束 -->
 </view>
