@@ -1,0 +1,36 @@
+// 轮播图样式
+.index_swiper {
+  swiper {
+    width: 750rpx;
+    height: 375rpx;
+
+    swiper-item {
+      image {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//商品大类样式
+.index_bigType {
+  // 距离顶部20rpx
+  padding-top: 20rpx;
+  // 和轮播图之间的间隙的背景颜色
+  background-color: #F7F7F7;
+
+  .bigTypeRow {
+    // 伸缩盒子布局
+    display: flex;
+
+    navigator {
+      // 每个伸缩盒子占一份
+      flex: 1;
+
+      image {
+        // 屏幕宽度占750rpx，所以每一行的商品大类的图片占150rpx（每个伸缩盒子的大小）
+        width: 150rpx;
+      }
+    }
+  }
+}

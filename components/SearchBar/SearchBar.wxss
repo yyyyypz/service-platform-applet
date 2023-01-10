@@ -1,0 +1,20 @@
+/* components/SearchBar/SearchBar.wxss */
+.search_bar {
+  /* 搜索框高度 宽度 */
+  height: 90rpx;
+  padding: 10rpx;
+  /* 搜框框背景颜色为主题颜色 */
+  background-color: var(--themeColor);
+}
+.search_bar navigator {
+  height: 100%;
+  display: flex;
+  /* 文字横向居中 */
+  justify-content: center;
+  /* 文字垂直居中 */
+  align-items: center;
+  /* 搜索框中间部分颜色 */
+  background-color: #fff;
+  /* 搜索框圆角设置 */
+  border-radius: 15rpx;
+}

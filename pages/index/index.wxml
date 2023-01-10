@@ -1,0 +1,40 @@
+<view>
+  <!-- 搜索框开始 -->
+  <SearchBar></SearchBar> <!-- 使用SearchBar组件 -->
+  <!-- 搜索框结束 -->
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <!--轮播图-->
+    <swiper autoplay="true" indicator-dots="black" circular="true">
+      <!-- 遍历后端响应的轮播图数据 -->
+      <swiper-item wx:for="{{swiperList}}" wx:for-item="swiperObject" wx:key="id">
+        <navigator>
+          <!-- mode="widthFix" 图片等比例缩放 -->
+          <image mode="widthFix" src="{{baseUrl+'/images/swiper/'+swiperObject.swiperPic}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+
+  <!-- 商品大类开始 -->
+  <view class="index_bigType">
+    <view class="bigTypeRow">
+      <!-- 遍历商品大类第一行 -->
+      <navigator wx:for="{{bigTypeList_row1}}" wx:for-item="bigTypeObject" wx:key="id">
+        <image mode="widthFix" src="{{baseUrl+'/images/bigType/'+bigTypeObject.image}}">
+        </image>
+      </navigator>
+    </view>
+  </view>
+  <view class="index_bigType">
+    <view class="bigTypeRow">
+      <!-- 遍历商品大类第二行 -->
+      <navigator wx:for="{{bigTypeList_row2}}" wx:for-item="bigTypeObject" wx:key="id">
+        <image mode="widthFix" src="{{baseUrl+'/images/bigType/'+bigTypeObject.image}}">
+        </image>
+      </navigator>
+    </view>
+  </view>
+  <!-- 商品大类结束 -->
+</view>

@@ -1,0 +1,6 @@
+<!--components/SearchBar/SearchBar.wxml-->
+<view class="search_bar">
+  <navigator url="/pages/search/search" open-type="navigate">    <!--点击搜索框跳转页面-->
+    <icon type="search" size="16"></icon>搜索     <!--搜索图标-->
+  </navigator>
+</view>

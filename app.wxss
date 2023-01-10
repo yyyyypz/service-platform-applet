@@ -1,0 +1,17 @@
+/* 全局引入iconfont样式 */
+@import "./styles/iconfont.wxss"
+
+/* 初始化全局样式，便于统一管理样式 */
+page,view,text,swiper,swiper-item,image,navigator{  /* 作用生效的组件 */
+  padding: 0;  /* 内边距 */
+  margin: 0;  /* 外边距 */
+  box-sizing: border-box;  /* 盒模型高度宽度计算 */
+}
+
+/* 全局变量定义 设置主题颜色，字体大小 */
+page{   /* 作用范围为page组件 */
+  /* 主题颜色 */
+  --themeColor: #FF5700;
+  /* 字体大小 rpx自适应，根据收据分辨率自动适应大小*/
+  font-size: 28rpx;
+}
