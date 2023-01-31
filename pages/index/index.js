@@ -3,8 +3,6 @@ import {
   requestPubUtil,
   getBaseUrl
 } from "../../utils/requestPubUtil.js"
-// 引入es7语法支持
-import regeneratorRuntime from '../../lib/runtime/runtime.js'
 Page({
 
   /**
@@ -54,6 +52,16 @@ Page({
     this.getHotProduct(baseUrl);
   },
 
+  // 大类点击事件
+  bigTypeJump(e) {
+    // console.log(e);
+    const index = e.currentTarget.dataset.index;
+    // console.log("index=" + index);
+    wx.switchTab({
+      url: '/pages/catagory/catagory',
+    })
+  },
+
   // async表示该请求是异步请求
   async getSwiperList(baseUrl) {
     // url和method封装为一个对象传到requestPubUtil中的params对象参数，then后面的第一个回调会成功，第二个为失败
@@ -72,7 +80,7 @@ Page({
     // })
     // await等待请求完成后才能继续执行后面的代码
     const result = await requestPubUtil({
-      url: baseUrl + '/product/querySwiper',
+      url: '/product/querySwiper',
       method: "GET"
     });
     this.setData({
@@ -82,7 +90,7 @@ Page({
 
   async getBigType(baseUrl) {
     const result = await requestPubUtil({
-      url: baseUrl + '/bigType/queryBigType',
+      url: '/bigType/queryBigType',
       method: "GET"
     });
     // 获取所有商品大类
@@ -105,11 +113,11 @@ Page({
   // 获取热卖商品
   async getHotProduct(baseUrl) {
     const result = await requestPubUtil({
-      url: baseUrl + '/product/queryHotProduct',
+      url: '/product/queryHotProduct',
       method: "GET"
     });
     this.setData({
-      hotProductList:result.data.datas
+      hotProductList: result.data.datas
     })
   }
 })

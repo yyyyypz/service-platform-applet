@@ -17,7 +17,8 @@ export const requestPubUtil = (params) => {
     // 发送异步请求
     wx.request({
       // 解构请求的所有参数（请求路径及请求方式）
-      ...params,
+      url:baseUrl+params.url,
+      method:params.method,
       // 请求成功调用resolve方法（fullfilled状态）
       success: (result) => {
         resolve(result)

@@ -21,7 +21,7 @@
   <view class="index_bigType">
     <view class="bigTypeRow">
       <!-- 遍历商品大类第一行 -->
-      <navigator wx:for="{{bigTypeList_row1}}" wx:for-item="bigTypeObject" wx:key="id">
+      <navigator bindtap="bigTypeJump" data-index="{{index}}" wx:for="{{bigTypeList_row1}}" wx:for-item="bigTypeObject" wx:key="id">
         <image mode="widthFix" src="{{baseUrl+'/images/bigType/'+bigTypeObject.image}}">
         </image>
       </navigator>
@@ -30,7 +30,7 @@
   <view class="index_bigType">
     <view class="bigTypeRow">
       <!-- 遍历商品大类第二行 -->
-      <navigator wx:for="{{bigTypeList_row2}}" wx:for-item="bigTypeObject" wx:key="id">
+      <navigator bindtap="bigTypeJump" data-index="{{index+5}}" wx:for="{{bigTypeList_row2}}" wx:for-item="bigTypeObject" wx:key="id">
         <image mode="widthFix" src="{{baseUrl+'/images/bigType/'+bigTypeObject.image}}">
         </image>
       </navigator>

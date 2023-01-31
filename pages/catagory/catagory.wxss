@@ -1,1 +1,55 @@
-/* pages/catagory/catagory.wxss */
+.categories {
+  height: 100%;
+}
+.categories .categories_container {
+  height: calc( 100vh - 99rpx );
+  width: 760rpx;
+  display: flex;
+}
+.categories .categories_container .leftMenu {
+  flex: 2;
+}
+.categories .categories_container .leftMenu .leftMenu_item {
+  margin-top: 10rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.categories .categories_container .leftMenu .active {
+  font-weight: bolder;
+  color: var(--themeColor);
+  border-left: 8rpx solid currentColor;
+}
+.categories .categories_container .rightMenu {
+  flex: 5;
+}
+.categories .categories_container .rightMenu .productType {
+  padding: 30rpx 20rpx 30rpx 20rpx;
+}
+.categories .categories_container .rightMenu .productType .productType_title {
+  font-weight: bolder;
+}
+.categories .categories_container .rightMenu .productType .product_list navigator {
+  display: flex;
+  margin: 10rpx;
+}
+.categories .categories_container .rightMenu .productType .product_list navigator image {
+  flex: 1;
+}
+.categories .categories_container .rightMenu .productType .product_list navigator .right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.categories .categories_container .rightMenu .productType .product_list navigator .right .product_name {
+  padding-top: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.categories .categories_container .rightMenu .productType .product_list navigator .right .product_price {
+  padding-bottom: 10rpx;
+}

@@ -15,3 +15,6 @@ page{   /* 作用范围为page组件 */
   /* 字体大小 rpx自适应，根据收据分辨率自动适应大小*/
   font-size: 28rpx;
 }
+image{
+  width: 100%;
+}
