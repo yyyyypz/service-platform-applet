@@ -8,7 +8,7 @@
     <swiper autoplay="true" indicator-dots="black" circular="true">
       <!-- 遍历后端响应的轮播图数据 -->
       <swiper-item wx:for="{{swiperList}}" wx:for-item="swiperObject" wx:key="id">
-        <navigator>
+        <navigator url="/pages/product_detail/product_detail?id={{swiperObject.id}}">
           <!-- mode="widthFix" 图片等比例缩放 -->
           <image mode="widthFix" src="{{baseUrl+'/images/swiper/'+swiperObject.swiperPic}}"></image>
         </navigator>
@@ -45,7 +45,7 @@
     </view>
     <view class="hotProduct_list">
       <view class="product_detail" wx:for="{{hotProductList}}" wx:for-item="hotProductObject" wx:key="id">
-        <navigator>
+        <navigator url="/pages/product_detail/product_detail?id={{hotProductObject.id}}">
           <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+hotProductObject.proPic}}">
           </image>
           <view class="product_name">{{hotProductObject.name}}</view>
