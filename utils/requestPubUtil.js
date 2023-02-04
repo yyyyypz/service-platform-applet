@@ -14,7 +14,50 @@ let ajaxTimes = 0;
 export const getBaseUrl = () => {
   return baseUrl;
 }
+
+/**
+ * wx login封装
+ */
+export const getWxLogin = () => {
+  return new Promise((resolve, reject) => {
+    wx.login({
+      timeout: 5000,
+      success: (res) => {
+        resolve(res)
+      },
+      fail: (err) => {
+        reject(err)
+      }
+    })
+  });
+}
+
+/**
+ * wx getUserProfile封装
+ */
+export const getUserProfile = () => {
+  return new Promise((resolve, reject) => {
+    wx.getUserProfile({
+      desc: '获取用户信息',
+      success: (res) => {
+        resolve(res)
+      },
+      fail: (err) => {
+        reject(err)
+      }
+    })
+  });
+}
+
 export const requestPubUtil = (params) => {
+  // 根据路径是否带/my/判断是否是私有路径，如果是则带上header和token
+  let header = {
+    ...params.header
+  };
+  if (params.url.includes("/my/")) {
+    // 拼接header带上token
+    header["token"] = wx.getStorageSync('token')
+  }
   var start = new Date().getTime();
   console.log(start)
 
@@ -35,6 +78,8 @@ export const requestPubUtil = (params) => {
       // 解构请求的所有参数（请求路径及请求方式）
       url: baseUrl + params.url,
       method: params.method,
+      header,
+      data: params.data,
       // 请求成功调用resolve方法（fullfilled状态）
       success: (result) => {
         resolve(result)

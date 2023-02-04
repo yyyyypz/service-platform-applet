@@ -53,7 +53,7 @@
     <view>加入购物车</view>
   </view>
 
-  <view class=" tool_item btn_buy">
-    <view>理解购买</view>
+  <view class=" tool_item btn_buy" bindtap="handleBuy">
+    <view>立即购买</view>
   </view>
 </view>

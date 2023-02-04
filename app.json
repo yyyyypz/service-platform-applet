@@ -5,7 +5,9 @@
     "pages/cart/cart",
     "pages/mine/mine",
     "pages/search/search",
-    "pages/product_detail/product_detail"
+    "pages/product_detail/product_detail",
+    "pages/pay/pay",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",

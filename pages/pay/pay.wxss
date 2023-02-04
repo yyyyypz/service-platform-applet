@@ -1,23 +1,17 @@
-.recevie_address_row .address_btn {
+page {
+  padding-bottom: 70rpx;
+}
+.recevie_address_row {
+  border-bottom: 1px dotted gray;
   padding: 20rpx;
 }
-.recevie_address_row .address_btn button {
-  width: 60%;
+.recevie_address_row .user_info .user_info_item {
+  margin-top: 10rpx;
 }
-.recevie_address_row .user_info_row {
-  display: flex;
-  padding: 20rpx;
-}
-.recevie_address_row .user_info_row .user_info {
-  flex: 5;
-}
-.recevie_address_row .user_info_row .change_address_btn {
-  flex: 3;
-  text-align: right;
-}
-.recevie_address_row .user_info_row .change_address_btn button {
-  border: 1px solid gray;
-  font-weight: normal;
+.recevie_address_row .user_info .user_info_detail {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 10rpx;
 }
 .cart_content {
   background-color: #F5F5F5;
@@ -31,13 +25,6 @@
   border-radius: 10px;
   margin: 20rpx;
   padding-right: 20rpx;
-}
-.cart_content .cart_main .cart_item .cart_chk_wrap {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20rpx;
 }
 .cart_content .cart_main .cart_item .cart_img_wrap {
   flex: 2;
@@ -75,20 +62,10 @@
 .cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool {
   display: flex;
 }
-.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .num_edit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 55rpx;
-  height: 55rpx;
-}
 .cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .goods_num {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85rpx;
-  height: 55rpx;
-  background-color: #F5F5F5;
 }
 .footer_tool {
   display: flex;
@@ -99,18 +76,11 @@
   height: 90rpx;
   background-color: #fff;
   border-top: 1px solid #ccc;
-}
-.footer_tool .all_chk_wrap {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 25rpx;
+  padding-left: 30rpx;
 }
 .footer_tool .total_price_wrap {
   flex: 5;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .footer_tool .total_price_wrap .total_price .total_price_text {
