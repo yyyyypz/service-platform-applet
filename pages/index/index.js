@@ -52,13 +52,37 @@ Page({
     this.getHotProduct(baseUrl);
   },
 
-  // 大类点击事件
-  bigTypeJump(e) {
+  // 功能模块点击事件
+  bigTypeJump1(e) {
     // console.log(e);
     const index = e.currentTarget.dataset.index;
     // console.log("index=" + index);
     wx.switchTab({
       url: '/pages/catagory/catagory',
+    })
+  },
+  bigTypeJump2(e) {
+    // console.log(e);
+    const index = e.currentTarget.dataset.index;
+    // console.log("index=" + index);
+    wx.navigateTo({
+      url: '/pages/book/book',
+    })
+  },
+  bigTypeJump3(e) {
+    // console.log(e);
+    const index = e.currentTarget.dataset.index;
+    // console.log("index=" + index);
+    wx.navigateTo({
+      url: '/pages/product_detail/product_detail',
+    })
+  },
+  bigTypeJump4(e) {
+    // console.log(e);
+    const index = e.currentTarget.dataset.index;
+    // console.log("index=" + index);
+    wx.navigateTo({
+      url: '/pages/lease/lease',
     })
   },
 

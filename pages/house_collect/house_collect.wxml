@@ -1,0 +1,32 @@
+<!-- 购物车清单 开始 -->
+<view class="cart_content">
+  <view class="cart_main">
+    <view class="cart_item" wx:for="{{house_collect}}" wx:key="id">
+
+      <!-- 商品图片 开始 -->
+      <navigator class="cart_img_wrap" url="/pages/house_detail/house_detail?id={{item.id}}">
+        <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+item.housePic}}"></image>
+      </navigator>
+      <!-- 商品图片 结束 -->
+
+      <!-- 商品信息 开始 -->
+      <view class="cart_info_wrap">
+        <navigator url="/pages/product_detail/product_detail?id={{item.id}}">
+          <view class="goods_name">{{item.name}}</view>
+        </navigator>
+        <view class="goods_price_wrap">
+          <view class="goods_price">
+            ¥{{item.price}}
+          </view>
+          <view class="cart_num_tool">
+            <view class="num_edit" bindtap="handleItemNumEdit" data-id="{{item.id}}" data-operation="{{-1}}">cnacel</view>
+            <!-- <view class="goods_num">{{item.num}}</view>
+            <view class="num_edit" bindtap="handleItemNumEdit" data-id="{{item.id}}" data-operation="{{1}}">+</view> -->
+          </view>
+        </view>
+      </view>
+      <!-- 商品信息 结束 -->
+    </view>
+  </view>
+</view>
+<!-- 购物车清单 结束 -->

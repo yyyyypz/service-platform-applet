@@ -11,7 +11,7 @@ page,view,text,swiper,swiper-item,image,navigator{  /* 作用生效的组件 */
 /* 全局变量定义 设置主题颜色，字体大小 */
 page{   /* 作用范围为page组件 */
   /* 主题颜色 */
-  --themeColor: #FF5700;
+  --themeColor: #8215b4;
   /* 字体大小 rpx自适应，根据收据分辨率自动适应大小*/
   font-size: 28rpx;
 }

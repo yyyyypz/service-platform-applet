@@ -35,6 +35,13 @@
           "query": "type=0",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "房屋租赁",
+          "pathName": "pages/book/book",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

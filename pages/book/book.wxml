@@ -1,0 +1,32 @@
+<view class="categories">
+  <!-- 搜索框开始 -->
+  <SearchBar></SearchBar> <!-- 使用SearchBar组件 -->
+  <!-- 搜索框结束 -->
+  <view class="categories_container">
+    <!-- 左侧商品分类开始 -->
+    <scroll-view scroll-y="true" class="leftMenu">
+      <!-- 遍历左侧商品大类 -->
+      <view class="leftMenu_item {{index==currentIndex ? 'active' :''}}" wx:for="{{leftBigType}}" wx:key="*this" data-index="{{index}}" bindtap="leftMenuChange">{{item}}
+      </view>
+    </scroll-view>
+    <!-- 左侧商品分类结束 -->
+    <!-- 右侧商品分类开始 -->
+    <scroll-view scroll-y="true" class="rightMenu" scroll-top="{{scrollTop}}">
+      <view class="productType" wx:for="{{rightSmallType}}" wx:for-item="productType" wx:key="id">
+        <view class="productType_title">{{productType.name}}
+        </view>
+        <view class="product_list" wx:for="{{productType.productList}}" wx:for-item="product" wx:key="id">
+          <navigator url="/pages/product_detail/product_detail?id={{product.id}}">
+            <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+product.proPic}}">
+            </image>
+            <view class="right">
+              <view class="product_name">{{product.name}}</view>
+              <view class="product_price">{{'¥'+product.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 右侧商品分类结束 -->
+  </view>
+</view>

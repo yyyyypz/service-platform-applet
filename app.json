@@ -7,17 +7,21 @@
     "pages/search/search",
     "pages/product_detail/product_detail",
     "pages/pay/pay",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/lease/lease",
+    "pages/book/book",
+    "pages/house_detail/house_detail",
+    "pages/house_collect/house_collect"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ff5700",
+    "navigationBarBackgroundColor": "#8215b4",
     "navigationBarTitleText": "ShopMall",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#ff5700",
+    "selectedColor": "#8215b4",
     "backgroundColor": "#fafafa",
     "list": [{
         "pagePath": "pages/index/index",

@@ -41,6 +41,14 @@
     </view>
     <!-- 收货地址管理结束 -->
 
+    <!-- 房屋收藏开始 -->
+    <view class="address_wrap">
+      <navigator url="/pages/house_collect/house_collect">
+        我的收藏
+      </navigator>
+    </view>
+    <!-- 房屋收藏结束 -->
+
     <!-- 应用相关信息开始 -->
     <view class="app_info_wrap">
       <view class="app_info_item app_info_contact">

@@ -16,7 +16,12 @@
   flex: 1;
 }
 .index_bigType .bigTypeRow navigator image {
-  width: 150rpx;
+  width: 185rpx;
+}
+.index_bigType .bigTypeRow navigator .modelName {
+  width: 185rpx;
+  margin-left: 39rpx;
+  color: #0f0d0d;
 }
 .index_hotProduct .hotProduct_title {
   font-size: 32rpx;
