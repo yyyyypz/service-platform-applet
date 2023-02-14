@@ -13,25 +13,9 @@
 
     <!-- 订单管理开始 -->
     <view class="order_wrap">
-      <view class="order_title">我的订单</view>
-      <view class="order_content">
-        <navigator url="/pages/order/order?type=1">
-          <view class="iconfont icon-daifukuan"></view>
-          <view class="order_name">待付款</view>
-        </navigator>
-        <navigator url="/pages/order/order?type=2">
-          <view class="iconfont icon-daishouhuo"></view>
-          <view class="order_name">待收货</view>
-        </navigator>
-        <navigator url="/pages/order/order?type=3">
-          <view class="iconfont icon-tuikuan"></view>
-          <view class="order_name">退款/退货</view>
-        </navigator>
-        <navigator url="/pages/order/order?type=0">
-          <view class="iconfont icon-dingdan"></view>
-          <view class="order_name">全部订单</view>
-        </navigator>
-      </view>
+      <navigator url="/pages/order/order?type=1">
+        <view class="order_title">我的订单</view>
+      </navigator>
     </view>
     <!-- 订单管理结束 -->
 
