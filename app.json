@@ -11,7 +11,9 @@
     "pages/lease/lease",
     "pages/book/book",
     "pages/house_detail/house_detail",
-    "pages/house_collect/house_collect"
+    "pages/house_collect/house_collect",
+    "pages/my_book/my_book",
+    "pages/doctor_detail/doctor_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -42,6 +42,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "挂号预约",
+          "pathName": "pages/book/book",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

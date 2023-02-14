@@ -1,11 +1,11 @@
 <!-- 购物车清单 开始 -->
 <view class="cart_content">
   <view class="cart_main">
-    <view class="cart_item" wx:for="{{house_collect}}" wx:key="id">
+    <view class="cart_item" wx:for="{{booking}}" wx:key="id">
 
       <!-- 商品图片 开始 -->
-      <navigator class="cart_img_wrap" url="/pages/house_detail/house_detail?id={{item.id}}">
-        <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+item.housePic}}"></image>
+      <navigator class="cart_img_wrap" url="/pages/doctor_detail/doctor_detail?id={{item.id}}">
+        <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+item.doctorPic}}"></image>
       </navigator>
       <!-- 商品图片 结束 -->
 

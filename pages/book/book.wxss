@@ -53,3 +53,16 @@
 .categories .categories_container .rightMenu .productType .product_list navigator .right .product_price {
   padding-bottom: 10rpx;
 }
+.order_pay_wrap {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #8215b4, #8215b4);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10rpx;
+  width: 120rpx;
+}

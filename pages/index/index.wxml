@@ -19,27 +19,27 @@
     <view class="bigTypeRow">
       <!-- 物资购买 -->
       <navigator bindtap="bigTypeJump1" url="/pages/catagory/catagory">
-        <image mode="widthFix" src="{{baseUrl+'/images/bigType/1.jpg'}}">
+        <image mode="widthFix" src="{{baseUrl+'/images/bigType/购物.jpg'}}">
         </image>
-        <text class="modelName">物资购买</text>
+        <!-- <text class="modelName">物资购买</text> -->
       </navigator>
       <!-- 挂号预约 -->
       <navigator bindtap="bigTypeJump2" url="/pages/book/book">
-        <image mode="widthFix" src="{{baseUrl+'/images/bigType/2.jpg'}}">
+        <image mode="widthFix" src="{{baseUrl+'/images/bigType/挂号预约.jpg'}}">
         </image>
-        <text class="modelName">挂号预约</text>
+        <!-- <text class="modelName">挂号预约</text> -->
       </navigator>
       <!-- 社区实时 -->
       <navigator bindtap="bigTypeJump3" url="/pages/product_detail/product_detail">
-        <image mode="widthFix" src="{{baseUrl+'/images/bigType/3.jpg'}}">
+        <image mode="widthFix" src="{{baseUrl+'/images/bigType/新闻.jpg'}}">
         </image>
-        <text class="modelName">社区实时</text>
+        <!-- <text class="modelName">社区实时</text> -->
       </navigator>
       <!-- 房屋租赁 -->
       <navigator bindtap="bigTypeJump4" url="/pages/lease/lease">
-        <image mode="widthFix" src="{{baseUrl+'/images/bigType/4.jpg'}}">
+        <image mode="widthFix" src="{{baseUrl+'/images/bigType/房屋租赁.jpg'}}">
         </image>
-        <text class="modelName">房屋租赁</text>
+        <!-- <text class="modelName">房屋租赁</text> -->
       </navigator>
     </view>
   </view>

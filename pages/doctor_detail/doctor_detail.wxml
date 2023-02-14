@@ -1,0 +1,55 @@
+<!-- 轮播图开始 -->
+<view class="productDetail_swiper">
+  <!--轮播图-->
+  <swiper autoplay="true" indicator-dots="black" circular="true">
+    <!-- 遍历后端响应的轮播图数据 -->
+    <swiper-item wx:for="{{product.doctorSwiperImages}}" wx:for-item="swiperObject" wx:key="id">
+      <navigator>
+        <!-- mode="widthFix" 图片等比例缩放 -->
+        <image mode="widthFix" src="{{baseUrl+'/images/productSwiperImages/'+swiperObject.image}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 轮播图结束 -->
+
+<view class="product_price"> ¥ {{product.price}}</view>
+<view class="product_name">{{product.name}}</view>
+<!-- <view class="product_descripion">{{product.description}}</view> -->
+
+<view class="desc_tabs">
+  <view class="tabs_title">
+    <view class="title_item {{activeIndex==0?'active':''}}" data-index="0" bindtap="handleItemTap">医师简介</view>
+    <!-- <view class="title_item {{activeIndex==1?'active':''}}" data-index="1" bindtap="handleItemTap">房屋规格</view> -->
+  </view>
+
+  <view class="tabs_content">
+    <block wx:if="{{activeIndex==0}}">
+      <rich-text nodes="{{product.productIntroImgs}}"></rich-text>
+    </block>
+    <block wx:elif="{{activeIndex==1}}">
+      <rich-text nodes="{{product.productParaImgs}}"></rich-text>
+    </block>
+  </view>
+</view>
+<view class="btm_tool">
+  <navigator open-type="switchTab" url="/pages/index/index" class="tool_item">
+    <view class="iconfont icon-home"></view>
+    <view>首页</view>
+  </navigator>
+
+  <!-- <view class="tool_item">
+    <view class="iconfont icon-kefufenxiermaikefu"></view>
+    <view>联系房东</view>
+    <button open-type="contact"></button>
+  </view> -->
+
+  <navigator open-type="navigate" url="/pages/house_collect/house_collect" class="tool_item">
+    <view class="iconfont icon-gouwuche"></view>
+    <view bindtap="handleCart">我的预约</view>
+  </navigator>
+
+  <view class="tool_item btn_cart" bindtap="handleCartAdd">
+    <view>预约</view>
+  </view>
+</view>
