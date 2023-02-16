@@ -30,7 +30,7 @@
         <!-- <text class="modelName">挂号预约</text> -->
       </navigator>
       <!-- 社区实时 -->
-      <navigator bindtap="bigTypeJump3" url="/pages/product_detail/product_detail">
+      <navigator bindtap="bigTypeJump3" url="/pages/news/news">
         <image mode="widthFix" src="{{baseUrl+'/images/bigType/新闻.jpg'}}">
         </image>
         <!-- <text class="modelName">社区实时</text> -->

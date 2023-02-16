@@ -13,7 +13,9 @@
     "pages/house_detail/house_detail",
     "pages/house_collect/house_collect",
     "pages/my_book/my_book",
-    "pages/doctor_detail/doctor_detail"
+    "pages/doctor_detail/doctor_detail",
+    "pages/news/news",
+    "pages/news_detail/news_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

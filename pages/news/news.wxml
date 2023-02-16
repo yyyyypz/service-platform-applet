@@ -1,0 +1,22 @@
+<view class="categories">
+  <view class="categories_container">
+    <!-- 新闻预览开始 -->
+    <scroll-view scroll-y="true" class="rightMenu" scroll-top="{{scrollTop}}">
+      <view class="productType" wx:for="{{news}}" wx:for-item="newsType" wx:key="id">
+        <view class="productType_title">{{newsType.name}}
+        </view>
+        <view class="product_list" wx:for="{{newsType.news}}" wx:for-item="news" wx:key="id">
+          <navigator url="/pages/news_detail/news_detail?id={{news.id}}">
+            <image mode="widthFix" src="{{baseUrl+'/images/hotProduct/'+news.newsPic}}">
+            </image>
+            <view class="right">
+              <view class="product_name">{{news.name}}</view>
+              <!-- <view class="product_price">{{news.content}}</view> -->
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 新闻预览结束 -->
+  </view>
+</view>
